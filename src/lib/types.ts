@@ -144,3 +144,15 @@ export function getScoreBgColor(score: number): string {
   if (score >= 40) return "bg-yellow-100 text-yellow-700";
   return "bg-red-100 text-red-700";
 }
+
+// === Pipeline Stages ===
+
+export const PIPELINE_STAGE_LABELS = {
+  lead: "リード",
+  contacted: "コンタクト済",
+  meeting: "面談",
+  negotiation: "交渉",
+  closed: "成約"
+};
+
+export const PIPELINE_STAGES = Object.keys(PIPELINE_STAGE_LABELS) as (keyof typeof PIPELINE_STAGE_LABELS)[];
